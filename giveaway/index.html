@@ -73,7 +73,17 @@
       .giveaway-form-grid{grid-template-columns:1fr}
       .giveaway-field-wide{grid-column:auto}
     }
-    .giveaway-rules{max-width:650px;margin:24px auto 0;color:var(--muted);font-size:.82rem}
+    .giveaway-rules{max-width:760px;margin:30px auto 0;padding:26px 28px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.68);color:var(--muted);font-size:.9rem;text-align:left}
+    .giveaway-rules h2{margin:0 0 18px;color:var(--text);font:600 1.65rem "Playfair Display",Georgia,serif;text-align:center}
+    .giveaway-rules h3{margin:20px 0 7px;color:var(--text);font-size:1rem}
+    .giveaway-rules h3:first-of-type{margin-top:0}
+    .giveaway-rules p{margin:7px 0}
+    .giveaway-rules ul{margin:8px 0 12px;padding-left:22px}
+    .giveaway-rules li{margin:5px 0;padding-left:3px}
+    .giveaway-rules strong{color:var(--text)}
+    .giveaway-rules .rules-date{display:block;margin:0 auto 18px;text-align:center;font-weight:600;color:#647451}
+    .giveaway-rules .platform-note{margin-top:20px;padding-top:14px;border-top:1px solid var(--border);font-size:.82rem}
+    @media(max-width:600px){.giveaway-rules{padding:21px 18px}.giveaway-rules h2{font-size:1.45rem}}
     .giveaway-back{display:inline-flex;margin-top:28px;color:var(--muted);font-weight:600}
     .giveaway-back:hover{color:#647451}
   </style>
@@ -152,7 +162,37 @@
           </div>
         </div>
 
-        <p class="giveaway-rules">Please review the official giveaway rules and eligibility requirements before entering. This promotion is not sponsored, endorsed, administered by, or associated with Instagram or Facebook.</p>
+        <section class="giveaway-rules" aria-labelledby="giveaway-rules-title">
+          <h2 id="giveaway-rules-title">Official Giveaway Rules &amp; Eligibility</h2>
+          <span class="rules-date">November 12, 2026 – December 25, 2026</span>
+
+          <h3>1. Who can enter</h3>
+          <p>Entrants must be <strong>18 years of age or older</strong>. The event receiving the prize must take place within <strong>40 miles of downtown Buffalo, New York</strong>.</p>
+
+          <h3>2. Entry period</h3>
+          <p>The giveaway opens on <strong>November 12, 2026</strong> and closes at <strong>11:59 p.m. Eastern Time on December 25, 2026</strong>. Entries submitted after the closing time will not be included in the drawing.</p>
+
+          <h3>3. How to enter</h3>
+          <p>To be eligible, complete <strong>all</strong> of the following steps during the entry period:</p>
+          <ul>
+            <li>Like the Nickel City Clicks giveaway post on Instagram.</li>
+            <li>Follow <strong>@nickelcityclicks</strong> on Instagram.</li>
+            <li>Tag a friend in the giveaway post comments who needs a photo booth at their event.</li>
+            <li>Complete and submit the giveaway entry form on this page.</li>
+          </ul>
+          <p>Entries must satisfy all of the requirements above to be eligible.</p>
+
+          <h3>4. Prize</h3>
+          <p>One winner will receive the <strong>Full Photo Booth Package</strong> for one event, for up to <strong>six hours</strong>. The event must take place within 40 miles of downtown Buffalo, New York.</p>
+
+          <h3>5. Winner selection and notification</h3>
+          <p>One eligible winner will be selected at random from the qualifying entries. The winner will be announced on <strong>January 1, 2027</strong> and contacted using the email address provided in the giveaway form.</p>
+
+          <h3>6. Email and privacy</h3>
+          <p>Information submitted through the entry form will be used to administer the giveaway and contact the potential winner. <strong>You will only be added to the Nickel City Clicks marketing email list if you separately check the optional mailing-list consent box.</strong> Leaving that box unchecked will not affect your giveaway entry.</p>
+
+          <p class="platform-note">This giveaway is not sponsored, endorsed, administered by, or associated with Instagram or Facebook.</p>
+        </section>
         <a class="giveaway-back" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp; Back to Nickel City Clicks</a>
       </section>
     </div>
