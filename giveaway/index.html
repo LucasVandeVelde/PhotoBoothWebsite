@@ -27,24 +27,55 @@
     .giveaway-form-area{max-width:650px;margin:36px auto 0;padding:28px;border:1px dashed rgba(109,109,109,.45);border-radius:16px;background:rgba(245,233,218,.48);text-align:left}
     .giveaway-form-area h2{margin:0 0 8px;text-align:center;color:var(--text);font-size:1.35rem}
     .giveaway-form-area>p{margin:0;text-align:center;color:var(--muted);font-size:.92rem}
-    .giveaway-form-placeholder{margin-top:20px;padding:24px;border-radius:12px;background:rgba(255,255,255,.72);color:var(--muted);text-align:center;font-size:.92rem}
-    .giveaway-form-placeholder p{margin:8px 0 0}
-    .mailing-list-consent{
-      display:flex;align-items:flex-start;gap:12px;margin:20px 0 18px;
-      padding:15px 16px;border:1px solid var(--border);border-radius:12px;
-      background:rgba(255,255,255,.82);color:var(--text);cursor:pointer;
-      font-size:.9rem;line-height:1.5;
+    .giveaway-form-container{margin-top:20px;padding:26px;border-radius:14px;background:rgba(255,255,255,.86);border:1px solid rgba(230,218,206,.9)}
+    .giveaway-entry-form{display:grid;gap:18px;text-align:left}
+    .giveaway-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .giveaway-field{display:flex;flex-direction:column;gap:7px;min-width:0}
+    .giveaway-field>span{color:var(--text);font-size:.9rem;font-weight:600}
+    .giveaway-entry-form .giveaway-field input,
+    .giveaway-entry-form .giveaway-field textarea{
+      display:block;width:100%;min-width:0;min-height:50px;margin:0;padding:13px 15px;
+      border:1px solid #d8cbbb;border-radius:10px;background:#fff;color:var(--text);
+      font:400 .95rem "Poppins",system-ui,sans-serif;box-shadow:none;
     }
-    .mailing-list-consent input[type="checkbox"]{
-      flex:0 0 18px;width:18px;height:18px;margin:3px 0 0;
+    .giveaway-entry-form .giveaway-field textarea{min-height:118px;resize:vertical}
+    .giveaway-entry-form .giveaway-field input::placeholder,
+    .giveaway-entry-form .giveaway-field textarea::placeholder{color:#777;opacity:1}
+    .giveaway-entry-form .giveaway-field input:focus,
+    .giveaway-entry-form .giveaway-field textarea:focus{outline:2px solid var(--highlight);outline-offset:1px;border-color:var(--highlight)}
+    .giveaway-field-wide{grid-column:1/-1}
+    .mailing-list-consent{
+      display:flex;align-items:flex-start;gap:12px;margin:0;padding:15px 16px;
+      border:1px solid var(--border);border-radius:12px;
+      background:rgba(245,233,218,.52);color:var(--text);cursor:pointer;
+      font-size:.88rem;line-height:1.55;
+    }
+    .giveaway-entry-form .mailing-list-consent input[type="checkbox"]{
+      flex:0 0 18px;width:18px;height:18px;min-height:18px;margin:3px 0 0;
       padding:0;accent-color:var(--highlight);cursor:pointer;
     }
     .mailing-list-consent strong{display:block;margin-bottom:3px;color:var(--text)}
     .mailing-list-consent span{color:var(--muted)}
+    .giveaway-submit-button{
+      display:inline-flex;align-items:center;justify-content:center;width:100%;
+      min-height:52px;padding:13px 22px;border:0;border-radius:10px;
+      background:linear-gradient(90deg,var(--highlight),#b8c69e);color:#fff;
+      font:700 1rem "Poppins",system-ui,sans-serif;cursor:pointer;
+      box-shadow:0 9px 22px rgba(163,177,138,.24);transition:transform .18s ease,box-shadow .18s ease;
+    }
+    .giveaway-submit-button:hover{transform:translateY(-2px);box-shadow:0 13px 26px rgba(163,177,138,.3)}
+    .giveaway-submit-button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+    @media(max-width:600px){
+      .giveaway-main{padding:42px 0 56px}
+      .giveaway-form-area{padding:20px 16px}
+      .giveaway-prize{align-items:flex-start}
+      .giveaway-form-container{padding:18px 14px}
+      .giveaway-form-grid{grid-template-columns:1fr}
+      .giveaway-field-wide{grid-column:auto}
+    }
     .giveaway-rules{max-width:650px;margin:24px auto 0;color:var(--muted);font-size:.82rem}
     .giveaway-back{display:inline-flex;margin-top:28px;color:var(--muted);font-weight:600}
     .giveaway-back:hover{color:#647451}
-    @media(max-width:600px){.giveaway-main{padding:42px 0 56px}.giveaway-form-area{padding:20px 16px}.giveaway-prize{align-items:flex-start}}
   </style>
 </head>
 <body>
@@ -92,20 +123,31 @@
 
         <div class="giveaway-form-area" id="giveaway-entry">
           <h2>Enter the giveaway</h2>
-          <div class="giveaway-form-placeholder">
-            <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="23632156-7414-4eca-b77e-8ac099015b96">
-            <input type="text" name="name" required>
-            <input type="email" name="email" required>
-            <textarea name="message"></textarea>
-            <label class="mailing-list-consent">
-              <input type="checkbox" name="mailing_list_opt_in" value="yes">
-              <span>
-                <strong>Keep me in the loop! (Optional)</strong>
-                Yes, I'd like to receive occasional emails from Nickel City Clicks about promotions, updates, and special offers. I understand I can unsubscribe at any time.
-              </span>
-            </label>
-            <button type="submit">Submit Form</button>
+          <div class="giveaway-form-container">
+            <form class="giveaway-entry-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="23632156-7414-4eca-b77e-8ac099015b96">
+              <div class="giveaway-form-grid">
+                <label class="giveaway-field">
+                  <span>Full name</span>
+                  <input type="text" name="name" autocomplete="name" placeholder="Enter your full name" required>
+                </label>
+                <label class="giveaway-field">
+                  <span>Email address</span>
+                  <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                </label>
+                <label class="giveaway-field giveaway-field-wide">
+                  <span>Message <span style="font-weight:400;color:var(--muted)">(optional)</span></span>
+                  <textarea name="message" rows="4" placeholder="Anything else you'd like us to know?"></textarea>
+                </label>
+              </div>
+              <label class="mailing-list-consent">
+                <input type="checkbox" name="mailing_list_opt_in" value="yes">
+                <span>
+                  <strong>Keep me in the loop! (Optional)</strong>
+                  Yes, I'd like to receive occasional emails from Nickel City Clicks about promotions, updates, and special offers. I understand I can unsubscribe at any time.
+                </span>
+              </label>
+              <button class="giveaway-submit-button" type="submit">Enter Giveaway</button>
             </form>
           </div>
         </div>
