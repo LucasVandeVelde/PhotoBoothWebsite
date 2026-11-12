@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Enter the Nickel City Clicks giveaway for a chance to win a free photo booth experience for your event.">
+  <meta name="theme-color" content="#F5E9DA">
+  <title>Giveaway | Nickel City Clicks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .giveaway-main{min-height:calc(100vh - 220px);padding:76px 0 84px}
+    .giveaway-wrap{max-width:900px;margin:0 auto}
+    .giveaway-card{position:relative;overflow:hidden;padding:clamp(28px,6vw,64px);border:1px solid var(--border);border-radius:22px;background:rgba(255,255,255,.62);box-shadow:0 22px 70px rgba(58,58,58,.12);text-align:center}
+    .giveaway-card:before{content:"";position:absolute;inset:0 0 auto;height:8px;background:linear-gradient(90deg,var(--highlight),var(--accent))}
+    .giveaway-eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;color:#647451;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .giveaway-title{max-width:760px;margin:0 auto 18px;font:600 clamp(2.3rem,6vw,4.25rem)/1.08 "Playfair Display",Georgia,serif;color:var(--text)}
+    .giveaway-intro{max-width:640px;margin:0 auto;color:var(--muted);font-size:1.05rem}
+    .giveaway-prize{display:flex;align-items:center;justify-content:center;gap:13px;max-width:560px;margin:34px auto;padding:18px 22px;border:1px solid rgba(163,177,138,.55);border-radius:15px;background:rgba(163,177,138,.16);color:var(--text);text-align:left}
+    .giveaway-prize i{color:#71845d;font-size:1.5rem}
+    .giveaway-prize strong{display:block;font-size:1.05rem}
+    .giveaway-prize span{display:block;color:var(--muted);font-size:.88rem}
+    .giveaway-form-area{max-width:650px;margin:36px auto 0;padding:28px;border:1px dashed rgba(109,109,109,.45);border-radius:16px;background:rgba(245,233,218,.48);text-align:left}
+    .giveaway-form-area h2{margin:0 0 8px;text-align:center;color:var(--text);font-size:1.35rem}
+    .giveaway-form-area>p{margin:0;text-align:center;color:var(--muted);font-size:.92rem}
+    .giveaway-form-placeholder{margin-top:20px;padding:24px;border-radius:12px;background:rgba(255,255,255,.72);color:var(--muted);text-align:center;font-size:.92rem}
+    .giveaway-form-placeholder p{margin:8px 0 0}
+    .giveaway-rules{max-width:650px;margin:24px auto 0;color:var(--muted);font-size:.82rem}
+    .giveaway-back{display:inline-flex;margin-top:28px;color:var(--muted);font-weight:600}
+    .giveaway-back:hover{color:#647451}
+    @media(max-width:600px){.giveaway-main{padding:42px 0 56px}.giveaway-form-area{padding:20px 16px}.giveaway-prize{align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand" aria-label="Nickel City Clicks home">
+        <img src="../images/ftlogo.PNG" alt="Nickel City Clicks logo" class="brand-logo">
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../index.html#gallery">Gallery</a></li>
+          <li><a href="../index.html#packages">Packages</a></li>
+          <li><a href="../index.html#reviews">Reviews</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="./" aria-current="page">Giveaway</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#gallery">Gallery</a>
+      <a href="../index.html#packages">Packages</a>
+      <a href="../index.html#reviews">Reviews</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="./" aria-current="page">Giveaway</a>
+      <a href="tel:+17163937794" class="mobile-phone">Call: +1 (716) 393-7794</a>
+    </div>
+  </header>
 
+  <main class="giveaway-main">
+    <div class="container giveaway-wrap">
+      <section class="giveaway-card" aria-labelledby="giveaway-title">
+        <div class="giveaway-eyebrow"><i class="fas fa-gift" aria-hidden="true"></i> Nickel City Clicks Giveaway</div>
+        <h1 class="giveaway-title" id="giveaway-title">You could win a Photo Booth for your next event!</h1>
+        <p class="giveaway-intro">We're giving one lucky winner a free Nickel City Clicks Photo Booth experience. Enter below for your chance to bring the fun to your celebration.</p>
+
+        <div class="giveaway-prize">
+          <i class="fas fa-camera-retro" aria-hidden="true"></i>
+          <div><strong>One free Photo Booth experience</strong><span>For the winner's event, subject to the official giveaway terms.</span></div>
+        </div>
+
+        <div class="giveaway-form-area" id="giveaway-entry">
+          <h2>Enter the giveaway</h2>
+          <p>Add your giveaway form in the space below.</p>
+          <!-- Paste your giveaway form/embed code inside this section. -->
+          <div class="giveaway-form-placeholder">
+            <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+            <p>Giveaway entry form will appear here.</p>
+          </div>
+        </div>
+
+        <p class="giveaway-rules">Please review the official giveaway rules and eligibility requirements before entering. This promotion is not sponsored, endorsed, administered by, or associated with Instagram or Facebook.</p>
+        <a class="giveaway-back" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp; Back to Nickel City Clicks</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a class="phone" href="tel:+17163937794">+1 (716) 393-7794</a>
+        <div class="social-links">
+          <a href="https://www.instagram.com/nickelcityclicks" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61574631681308" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <img src="../images/ftlogo.PNG" alt="Nickel City Clicks" class="footer-logo">
+        <div class="copyright">© <span id="year"></span> Nickel City Clicks</div>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
