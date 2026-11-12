@@ -29,6 +29,18 @@
     .giveaway-form-area>p{margin:0;text-align:center;color:var(--muted);font-size:.92rem}
     .giveaway-form-placeholder{margin-top:20px;padding:24px;border-radius:12px;background:rgba(255,255,255,.72);color:var(--muted);text-align:center;font-size:.92rem}
     .giveaway-form-placeholder p{margin:8px 0 0}
+    .mailing-list-consent{
+      display:flex;align-items:flex-start;gap:12px;margin:20px 0 18px;
+      padding:15px 16px;border:1px solid var(--border);border-radius:12px;
+      background:rgba(255,255,255,.82);color:var(--text);cursor:pointer;
+      font-size:.9rem;line-height:1.5;
+    }
+    .mailing-list-consent input[type="checkbox"]{
+      flex:0 0 18px;width:18px;height:18px;margin:3px 0 0;
+      padding:0;accent-color:var(--highlight);cursor:pointer;
+    }
+    .mailing-list-consent strong{display:block;margin-bottom:3px;color:var(--text)}
+    .mailing-list-consent span{color:var(--muted)}
     .giveaway-rules{max-width:650px;margin:24px auto 0;color:var(--muted);font-size:.82rem}
     .giveaway-back{display:inline-flex;margin-top:28px;color:var(--muted);font-weight:600}
     .giveaway-back:hover{color:#647451}
@@ -86,6 +98,13 @@
             <input type="text" name="name" required>
             <input type="email" name="email" required>
             <textarea name="message"></textarea>
+            <label class="mailing-list-consent">
+              <input type="checkbox" name="mailing_list_opt_in" value="yes">
+              <span>
+                <strong>Keep me in the loop! (Optional)</strong>
+                Yes, I'd like to receive occasional emails from Nickel City Clicks about promotions, updates, and special offers. I understand I can unsubscribe at any time.
+              </span>
+            </label>
             <button type="submit">Submit Form</button>
             </form>
           </div>
